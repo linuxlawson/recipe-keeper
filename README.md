@@ -1,4 +1,4 @@
-## recipe-keeper
+## Recipe Keeper
 A place to keep your recipes
 
 Needed something to work on, and experiment with.    
