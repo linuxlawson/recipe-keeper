@@ -12,9 +12,13 @@ Save As: Documents/Recipes/brownies
 
 Of course, you could also create sub-category folders such as:  
 breakfast, lunch, dinner, desserts, drinks, etc.  
-to keep recipes somewhat organized.
+to keep recipes somewhat organized.  
+In which case, the path to your file would be (using the example above):  
+Documents/Recipes/Desserts/brownies
 
 Will save as a text file, .txt is default extension so no need to add one.  
+
+Enjoy.
 
   
   
