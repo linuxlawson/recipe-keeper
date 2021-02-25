@@ -1,37 +1,21 @@
-## Welcome to GitHub Pages
+Needed something to work on, and experiment with.
+So, here is what I came up with. 'Recipe Keeper' screenshot here
 
-You can use the [editor on GitHub](https://github.com/linuxlawson/recipe-keeper/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+As seen in the screenshot, there are entry boxes for: Recipe Name, Category, Difficulty/Time.
+Also columns for items needed, such as: Ingredients, Utensils, and Other.
+And a text box for instructions.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Just fill in the blanks and save your recipe to a folder of your choice.
 
-### Markdown
+Example:
+Save As: Documents/Recipes/brownies
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Of course, you could also create sub-category folders such as:
+Breakfast | Lunch | Dinner | Desserts | Drinks | etc.
+to keep recipes somewhat organized.
+In which case, the path to your file would be (using the example above):
+Documents/Recipes/Desserts/brownies
 
-```markdown
-Syntax highlighted code block
+Will save as a text file, .txt is default extension so no need to add one.
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/linuxlawson/recipe-keeper/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Enjoy.
