@@ -2,9 +2,13 @@
 A place to keep your recipes
 
 Needed something to work on, and experiment with.    
-So, here is what I came up with. Recipe Keeper, screenshot [here](https://github.com/linuxlawson/recipe-keeper/blob/main/screenshot.png).  
+So, here is what I came up with. 'Recipe Keeper' screenshot [here](https://github.com/linuxlawson/recipe-keeper/blob/main/screenshot.png)  
 
-Just fill in the entry boxes and save your recipe to a folder of your choice.  
+As seen in the screenshot, there are entry boxes for: Recipe Name, Category, Difficulty/Time.  
+Also columns for items needed, such as: Ingredients, Utensils, and Other.  
+And a text box for instructions.
+
+Just fill in the blanks and save your recipe to a folder of your choice.  
 
 Example:  
 Save As: Documents/Recipes/brownies  
