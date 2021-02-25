@@ -61,11 +61,11 @@ def clear_fields(event=None):
 	rec.delete('0', 'end')
 	cat.delete('0', 'end')
 	diff.delete('0', 'end')
-	for x in range(3):
-		for y in range(9):
+	for y in range(3):
+		for x in range(9):
 			my_entry = tk.Entry(midframe, bd=1, width='15')
-			my_entry.grid(row=y, column=x, sticky='nw', padx=18, pady=2)
-			my_entries.append("")
+			my_entry.grid(row=x, column=y, sticky='nw', padx=18, pady=2)
+			my_entries.append(" ")
 	tex.delete('1.0', 'end')
 	rec.focus_set()
 
@@ -95,9 +95,9 @@ def save_com(event=None):
     if file:
         file.write("\nRecipe Name:      " + (rec.get()) + "\n")
         file.write("\nCategory:         " + (cat.get()) + "\n")
-        file.write("\nDifficulty/Time:  " + (diff.get()) + "\n")
+        file.write("\nDifficulty/Time:  " + (diff.get()) + "\n\n\n")
 
-        file.write("\n\nIngredients: ".ljust(20) + "\t\t\tUtensils: ".ljust(20) + "\t\t\tOther: ".ljust(20) + "\n\n")
+        file.write("Ingredients: ".ljust(28) + "Utensils: ".ljust(28) + "Other: ".ljust(20) + "\n\n")
 
         file.write(my_entries[0].get().ljust(28) + (my_entries[9].get().ljust(28) + (my_entries[18].get().ljust(20) + "\n")))
         file.write(my_entries[1].get().ljust(28) + (my_entries[10].get().ljust(28) + (my_entries[19].get().ljust(20) + "\n")))
@@ -176,12 +176,12 @@ midframe = tk.Frame(mainframe, bd=0, relief='flat')
 midframe.grid(row=7, column=0, columnspan=3, sticky='ew', padx=0, pady=0)
 
 #column loop
-for x in range(3):
+for y in range(3):
 	
 	#row loop
-	for y in range(9):
+	for x in range(9):
 		my_entry = tk.Entry(midframe, bd=1, width='15')
-		my_entry.grid(row=y, column=x, sticky='nw', padx=18, pady=2)
+		my_entry.grid(row=x, column=y, sticky='nw', padx=18, pady=2)
 		my_entries.append(my_entry)
 
 
