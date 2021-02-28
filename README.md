@@ -1,5 +1,5 @@
 ## Recipe Keeper
-A place to keep your recipes
+Create and Keep Recipes
 
 Needed something to work on, and experiment with.    
 So, here is what I came up with. 'Recipe Keeper' screenshot [here](https://github.com/linuxlawson/recipe-keeper/blob/main/screenshot.png)  
