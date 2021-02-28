@@ -9,11 +9,13 @@ Also columns for items needed, such as: Ingredients, Utensils, and Other.
 And a text box for instructions.
 
 Just fill in the blanks and save your recipe to a folder of your choice.  
+For example, you could create a Recipe folder within your Documents folder.  
 
-Example:  
+And as an example:  
 Save As: Documents/Recipes/brownies  
 
-Of course, you could also create sub-category folders such as:  
+Of course, you could also create sub-folders within the Recipe folder,   
+for different categories such as:  
 Breakfast | Lunch | Dinner | Desserts | Drinks | etc.  
 to keep recipes somewhat organized.  
 In which case, the path to your file would be (using the example above):  
