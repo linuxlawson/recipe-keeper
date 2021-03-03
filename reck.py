@@ -12,7 +12,7 @@ except:
 
 root = tk.Tk()
 root.title("Recipe Keeper")
-root.geometry("498x657")
+root.geometry("498x658")
 root.option_add("*Font", "TkDefaultFont 9")
 root.columnconfigure(0, weight=1)
 root.rowconfigure(0, weight=1)
@@ -28,8 +28,8 @@ mainframe.grid(row=0, column=0, sticky='n', padx=2, pady=2)
 #labels
 lab = tk.Label(mainframe, text="Recipe Keeper", font='Arial 10 bold')
 lab.grid(row=0, column=0, sticky='nw', padx=12, pady=6)
-lab1 = tk.Label(mainframe, text="Create and Keep Recipes\n")
-lab1.grid(row=1, column=0, columnspan=3, sticky='nw', padx=12, pady=4)
+lab1 = tk.Label(mainframe, text="Create and Keep Recipes")
+lab1.grid(row=1, column=0, columnspan=3, sticky='nw', padx=12, pady=(4,24))
 
 #recipe name
 rec = tk.Label(mainframe, text="Recipe Name:")
@@ -45,10 +45,10 @@ cat = tk.Entry(mainframe, bd=1, width='24')
 cat.grid(row=3, column=0, columnspan=3, sticky='n', padx=2, pady=2)
 
 #difficulty/time
-diff = tk.Label(mainframe, text="Difficulty/Time:\n\n")
+diff = tk.Label(mainframe, text="Difficulty/Time:")
 diff.grid(row=4, column=0,  sticky='nw', padx=12, pady=4)
 diff = tk.Entry(mainframe, bd=1, width='24')
-diff.grid(row=4, column=0, columnspan=3, sticky='n', padx=2, pady=2)
+diff.grid(row=4, column=0, columnspan=3, sticky='n', padx=2, pady=(2, 28))
 
 #items needed
 items_lbl = tk.Label(mainframe, text="Items Needed:", 
@@ -196,7 +196,7 @@ other.grid(row=6, column=2, sticky='nw', padx=44, pady=2)
 
 #midFrame (contains entry boxes)
 midframe = tk.Frame(mainframe, bd=0, relief='flat')
-midframe.grid(row=7, column=0, columnspan=3, sticky='ew')
+midframe.grid(row=7, column=0, columnspan=3, sticky='ew', padx=0, pady=(0,18))
 
 #column loop
 for y in range(3):
@@ -208,23 +208,12 @@ for y in range(3):
 		my_entries.append(my_entry)
 
 
-
-#empty space
-spacer = tk.Label(mainframe)
-spacer.grid(row=8, column=0, sticky='nw', padx=2, pady=0)
-
-
-#Instructions Label/Text
+#Text box
 inst = tk.Label(mainframe, text="Instructions:")
-inst.grid(row=9, column=0,  sticky='nw', padx=18, pady=0)
+inst.grid(row=8, column=0,  sticky='nw', padx=18, pady=0)
 tex = tk.Text(mainframe, bd=1, width=55, height='10')
-tex.grid(row=10, column=0, columnspan=3, sticky='ew', padx=18, pady=2)
+tex.grid(row=9, column=0, columnspan=3, sticky='ew', padx=18, pady=(2, 20))
 tex.config(wrap="word")
-
-
-#empty space (bottom)
-spacer = tk.Label(mainframe)
-spacer.grid(row=11, column=0, sticky='nw', padx=2, pady=0)
 
 
 
