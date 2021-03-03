@@ -12,7 +12,7 @@ except:
 
 root = tk.Tk()
 root.title("Recipe Keeper")
-root.geometry("498x664")
+root.geometry("498x657")
 root.option_add("*Font", "TkDefaultFont 9")
 root.columnconfigure(0, weight=1)
 root.rowconfigure(0, weight=1)
@@ -28,7 +28,7 @@ mainframe.grid(row=0, column=0, sticky='n', padx=2, pady=2)
 #labels
 lab = tk.Label(mainframe, text="Recipe Keeper", font='Arial 10 bold')
 lab.grid(row=0, column=0, sticky='nw', padx=12, pady=6)
-lab1 = tk.Label(mainframe, text="A Place To Keep Recipes\n")
+lab1 = tk.Label(mainframe, text="Create and Keep Recipes\n")
 lab1.grid(row=1, column=0, columnspan=3, sticky='nw', padx=12, pady=4)
 
 #recipe name
@@ -52,7 +52,7 @@ diff.grid(row=4, column=0, columnspan=3, sticky='n', padx=2, pady=2)
 
 #items needed
 items_lbl = tk.Label(mainframe, text="Items Needed:", 
-				fg='#1A1A1A', font=('Arial 10 bold'))
+					fg='#1A1A1A', font=('Arial 10 bold'))
 items_lbl.grid(row=5, column=0, sticky='nw', padx=12, pady=4)
 
 
@@ -115,9 +115,10 @@ def save_com(event=None):
     file = tkFileDialog.asksaveasfile(mode='w', defaultextension='.txt',
     filetypes = (("Text Files", "*.txt"),("All Files", "*.*")))
     if file:
-        file.write("\nRecipe Name:      " + (rec.get()) + "\n")
-        file.write("\nCategory:         " + (cat.get()) + "\n")
-        file.write("\nDifficulty/Time:  " + (diff.get()) + "\n\n\n")
+        file.write("\n")
+        file.write("Recipe Name:      " + (rec.get()) + "\n\n")
+        file.write("Category:         " + (cat.get()) + "\n\n")
+        file.write("Difficulty/Time:  " + (diff.get()) + "\n\n\n")
 
         file.write("Ingredients: ".ljust(28) + "Utensils: ".ljust(28) + "Other: ".ljust(28) + "\n\n")
 
@@ -129,9 +130,9 @@ def save_com(event=None):
         file.write(my_entries[5].get().ljust(28) + (my_entries[14].get().ljust(28) + (my_entries[23].get().ljust(28) + "\n")))
         file.write(my_entries[6].get().ljust(28) + (my_entries[15].get().ljust(28) + (my_entries[24].get().ljust(28) + "\n")))
         file.write(my_entries[7].get().ljust(28) + (my_entries[16].get().ljust(28) + (my_entries[25].get().ljust(28) + "\n")))
-        file.write(my_entries[8].get().ljust(28) + (my_entries[17].get().ljust(28) + (my_entries[26].get().ljust(28) + "\n")))
+        file.write(my_entries[8].get().ljust(28) + (my_entries[17].get().ljust(28) + (my_entries[26].get().ljust(28) + "\n\n\n")))
 
-        file.write("\n\nInstructions: " +  "\n\n")
+        file.write("Instructions: " +  "\n\n")
         data = tex.get('1.0', 'end-1c')
         file.write(data)
         file.close()
@@ -195,7 +196,7 @@ other.grid(row=6, column=2, sticky='nw', padx=44, pady=2)
 
 #midFrame (contains entry boxes)
 midframe = tk.Frame(mainframe, bd=0, relief='flat')
-midframe.grid(row=7, column=0, columnspan=3, sticky='ew', padx=0, pady=0)
+midframe.grid(row=7, column=0, columnspan=3, sticky='ew')
 
 #column loop
 for y in range(3):
@@ -203,27 +204,27 @@ for y in range(3):
 	#row loop
 	for x in range(9):
 		my_entry = tk.Entry(midframe, bd=1, width='15')
-		my_entry.grid(row=x, column=y, sticky='nw', padx=18, pady=2)
+		my_entry.grid(row=x, column=y, padx=18, pady=2)
 		my_entries.append(my_entry)
 
 
 
 #empty space
 spacer = tk.Label(mainframe)
-spacer.grid(row=8, column=0,  sticky='nw', padx=12, pady=0)
+spacer.grid(row=8, column=0, sticky='nw', padx=2, pady=0)
 
 
 #Instructions Label/Text
 inst = tk.Label(mainframe, text="Instructions:")
 inst.grid(row=9, column=0,  sticky='nw', padx=18, pady=0)
 tex = tk.Text(mainframe, bd=1, width=55, height='10')
-tex.grid(row=10, column=0, columnspan=3, sticky='nw', padx=18, pady=2)
+tex.grid(row=10, column=0, columnspan=3, sticky='ew', padx=18, pady=2)
 tex.config(wrap="word")
 
 
 #empty space (bottom)
 spacer = tk.Label(mainframe)
-spacer.grid(row=11, column=0, sticky='nw', padx=12, pady=4)
+spacer.grid(row=11, column=0, sticky='nw', padx=2, pady=0)
 
 
 
