@@ -12,7 +12,7 @@ except:
 
 root = tk.Tk()
 root.title("Recipe Keeper")
-root.geometry("498x658")
+root.geometry("544x658")
 root.option_add("*Font", "TkDefaultFont 9")
 root.columnconfigure(0, weight=1)
 root.rowconfigure(0, weight=1)
@@ -29,24 +29,24 @@ mainframe.grid(row=0, column=0, sticky='n', padx=2, pady=2)
 lab = tk.Label(mainframe, text="Recipe Keeper", font='Arial 10 bold')
 lab.grid(row=0, column=0, sticky='nw', padx=12, pady=6)
 lab1 = tk.Label(mainframe, text="Create and Keep Recipes")
-lab1.grid(row=1, column=0, columnspan=3, sticky='nw', padx=12, pady=(4,24))
+lab1.grid(row=1, column=0, sticky='nw', padx=12, pady=(4,24))
 
 #recipe name
 rec = tk.Label(mainframe, text="Recipe Name:")
-rec.grid(row=2, column=0,  sticky='nw', padx=12, pady=4)
+rec.grid(row=2, column=0, sticky='nw', padx=18, pady=4)
 rec = tk.Entry(mainframe, bd=1, width='24')
 rec.grid(row=2, column=0, columnspan=3, sticky='n', padx=2, pady=2)
 rec.focus_set()
 
 #category
 cat = tk.Label(mainframe, text="Category:")
-cat.grid(row=3, column=0,  sticky='nw', padx=12, pady=4)
+cat.grid(row=3, column=0, sticky='nw', padx=18, pady=4)
 cat = tk.Entry(mainframe, bd=1, width='24')
 cat.grid(row=3, column=0, columnspan=3, sticky='n', padx=2, pady=2)
 
 #difficulty/time
 diff = tk.Label(mainframe, text="Difficulty/Time:")
-diff.grid(row=4, column=0,  sticky='nw', padx=12, pady=4)
+diff.grid(row=4, column=0, sticky='nw', padx=18, pady=4)
 diff = tk.Entry(mainframe, bd=1, width='24')
 diff.grid(row=4, column=0, columnspan=3, sticky='n', padx=2, pady=(2, 28))
 
@@ -190,7 +190,7 @@ uten.grid(row=6, column=1, sticky='nw', padx=4, pady=2)
 
 #Other
 other = tk.Label(mainframe, text="Other:")
-other.grid(row=6, column=2, sticky='nw', padx=44, pady=2)
+other.grid(row=6, column=2, sticky='nw', padx=104, pady=2)
 
 
 
@@ -203,7 +203,7 @@ for y in range(3):
 	
 	#row loop
 	for x in range(9):
-		my_entry = tk.Entry(midframe, bd=1, width='15')
+		my_entry = tk.Entry(midframe, bd=1, width='17')
 		my_entry.grid(row=x, column=y, padx=18, pady=2)
 		my_entries.append(my_entry)
 
