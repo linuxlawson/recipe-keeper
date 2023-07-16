@@ -1,18 +1,14 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 #Recipe Keeper
 
 
-try:
-    import Tkinter as tk
-    import tkFileDialog
-except:
-    import tkinter as tk
-    import tkinter.filedialog as tkFileDialog
+import tkinter as tk
+import tkinter.filedialog as tkFileDialog
 
 
 root = tk.Tk()
 root.title("Recipe Keeper")
-root.geometry("544x658")
+root.geometry("544x680")
 root.option_add("*Font", "TkDefaultFont 9")
 root.columnconfigure(0, weight=1)
 root.rowconfigure(0, weight=1)
