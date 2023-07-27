@@ -1,10 +1,8 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 #Recipe Keeper
-
 
 import tkinter as tk
 import tkinter.filedialog as tkFileDialog
-
 
 root = tk.Tk()
 root.title("Recipe Keeper")
@@ -12,44 +10,44 @@ root.geometry("544x680")
 root.option_add("*Font", "TkDefaultFont 9")
 root.columnconfigure(0, weight=1)
 root.rowconfigure(0, weight=1)
-root.resizable(0,0)
+#root.resizable(0,0)
 
 my_entries = []
 
 #Main Frame
 mainframe = tk.Frame(root, bd=1, relief='solid')
-mainframe.grid(row=0, column=0, sticky='n', padx=2, pady=2)
+mainframe.grid(column=0, row=0, padx=2, pady=2, sticky='n')
 
 
-#labels
+#titles
 lab = tk.Label(mainframe, text="Recipe Keeper", font='Arial 10 bold')
-lab.grid(row=0, column=0, sticky='nw', padx=12, pady=6)
+lab.grid(column=0, row=0, padx=12, pady=6, sticky='nw')
 lab1 = tk.Label(mainframe, text="Create and Keep Recipes")
-lab1.grid(row=1, column=0, sticky='nw', padx=12, pady=(4,24))
+lab1.grid(column=0, row=1, padx=12, pady=(4,24), sticky='nw')
 
 #recipe name
 rec = tk.Label(mainframe, text="Recipe Name:")
-rec.grid(row=2, column=0, sticky='nw', padx=18, pady=4)
+rec.grid(column=0, row=2, padx=18, pady=4, sticky='nw')
 rec = tk.Entry(mainframe, bd=1, width='24')
-rec.grid(row=2, column=0, columnspan=3, sticky='n', padx=2, pady=2)
+rec.grid(column=0, row=2, padx=2, pady=2, columnspan=3, sticky='n')
 rec.focus_set()
 
 #category
 cat = tk.Label(mainframe, text="Category:")
-cat.grid(row=3, column=0, sticky='nw', padx=18, pady=4)
+cat.grid(column=0, row=3, padx=18, pady=4, sticky='nw')
 cat = tk.Entry(mainframe, bd=1, width='24')
-cat.grid(row=3, column=0, columnspan=3, sticky='n', padx=2, pady=2)
+cat.grid(column=0, row=3, padx=2, pady=2, columnspan=3, sticky='n')
 
 #difficulty/time
 diff = tk.Label(mainframe, text="Difficulty/Time:")
-diff.grid(row=4, column=0, sticky='nw', padx=18, pady=4)
+diff.grid(column=0, row=4, padx=18, pady=4, sticky='nw')
 diff = tk.Entry(mainframe, bd=1, width='24')
-diff.grid(row=4, column=0, columnspan=3, sticky='n', padx=2, pady=(2, 28))
+diff.grid(column=0, row=4, padx=2, pady=(2, 28), columnspan=3, sticky='n')
 
 #items needed
 items_lbl = tk.Label(mainframe, text="Items Needed:", 
 					fg='#1A1A1A', font=('Arial 10 bold'))
-items_lbl.grid(row=5, column=0, sticky='nw', padx=12, pady=4)
+items_lbl.grid(column=0, row=5, padx=12, pady=4, sticky='nw')
 
 
 
@@ -178,21 +176,21 @@ that this shouldn't happen often.
 #Labels for entry fields
 #Ingredients
 ing = tk.Label(mainframe, text="Ingredients:")
-ing.grid(row=6, column=0, sticky='nw', padx=18, pady=2)
+ing.grid(column=0, row=6, padx=18, pady=2, sticky='nw')
 
 #Utensils
 uten = tk.Label(mainframe, text="Utensils:")
-uten.grid(row=6, column=1, sticky='nw', padx=4, pady=2)
+uten.grid(column=1, row=6, padx=4, pady=2, sticky='nw')
 
 #Other
 other = tk.Label(mainframe, text="Other:")
-other.grid(row=6, column=2, sticky='nw', padx=104, pady=2)
+other.grid(column=2, row=6, padx=104, pady=2, sticky='nw')
 
 
 
 #midFrame (contains entry boxes)
 midframe = tk.Frame(mainframe, bd=0, relief='flat')
-midframe.grid(row=7, column=0, columnspan=3, sticky='ew', padx=0, pady=(0,18))
+midframe.grid(column=0, row=7, padx=0, pady=(0,18), columnspan=3, sticky='ew')
 
 #column loop
 for y in range(3):
@@ -200,15 +198,15 @@ for y in range(3):
 	#row loop
 	for x in range(9):
 		my_entry = tk.Entry(midframe, bd=1, width='17')
-		my_entry.grid(row=x, column=y, padx=18, pady=2)
+		my_entry.grid(column=y, row=x, padx=18, pady=2)
 		my_entries.append(my_entry)
 
 
 #Text box
 inst = tk.Label(mainframe, text="Instructions:")
-inst.grid(row=8, column=0,  sticky='nw', padx=18, pady=0)
+inst.grid(column=0, row=8, padx=18, pady=0, sticky='nw')
 tex = tk.Text(mainframe, bd=1, width=55, height='10')
-tex.grid(row=9, column=0, columnspan=3, sticky='ew', padx=18, pady=(2, 20))
+tex.grid(column=0, row=9, padx=18, pady=(2, 20), columnspan=3, sticky='ew')
 tex.config(wrap="word")
 
 
